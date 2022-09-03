@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COmpatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GammonVersE</title>
+
+  <!-- font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+  <!-- custom css file link -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- mapbox link and script -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js"></script>
+
+  <!-- lock header when menu open and soon message on button clicks-->
+  <script>
+
+    function locFunction() {
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      let stat = document.getElementById("toggler").checked;
+      if (stat === true) {
+        document.getElementById("headid").style.position = "relative";
+      }
+      else {
+        document.getElementById("headid").style.position = "sticky";
+      }
+    }
+
+    function relFunction() {
+      document.getElementById("toggler").checked = false;
+      document.getElementById("headid").style.position = "sticky";
+      let stat = document.getElementById("toggler").checked;
+      console.log(stat);
+    }
+
+    function clickAlert() {
+      alert("Coming soon!");
+    }   
+  </script>
+</head>
+
+<body>
+
+  <!-- header section -->
+  <header id="headid">
+
+    <div class="logfull">
+      <a href="#" class="logo" id="logleft"><span>G</span>amm<i class="fa-solid fa-globe" id="globe"></i>n</a>
+      <a href="#" class="logo" id="logright"><span id="bigv">V</span>ers<span>E</span></a>
+    </div>
+
+    <input type="checkbox" name="" id="toggler" onclick="locFunction()">
+    <label for="toggler" class="fas fa-bars"></label>
+
+    <nav class="navbar" onclick="relFunction()">
+      <a href="#hero">Top</a>
+      <span>|</span>
+      <a href="#about">What</a>
+      <span>|</span>
+      <a href="#products">Stuff</a>
+      <span>|</span>
+      <a href="#review">People</a>
+      <span>|</span>
+      <a href="#contact">Meat</a>
+    </nav>
+
+  </header>
+
+  <!-- hero banner -->
+  <div class="hero" id="hero">
+    <div class="content">
+      <h3>Virtual Piggery</h3>
+      <p>Bacon or Bust!!</p>
+      <form>
+        <button class="btn" formaction="app/index.html">Pig Farm App</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- about section -->
+  <section class="about" id="about">
+    <h1 class="section-title"><span>What</span> Is</h1>
+    <div class="row">
+
+      <div class="video-container">
+        <video src="img/VIdCol.mp4" loop autoplay muted></video>
+        <h3>Digital Piggery</h3>
+      </div>
+
+      <div class="content">
+        <h3>GammonVerse</h3>
+        <p>Shut up and pay attention. Sacrifice your brain to the multifaceted jambon with greatest of possibilities.
+          Detach from common sense and float away in a sea of metagravy.</p>
+        <p>Try the PigFarm app today to win limited edition NFT. This NFT might never be a unique key to the
+          uninvented GammonVersE 3D Multi Tiered SHAT™ array.</p>
+        <form>
+          <button class="btn" formaction="#contact">Let's Meat!</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- icons delivery offers etc -->
+  <div class="icons-container">
+
+    <div class="icons">
+      <img src="img/icon-1.png" alt="Shopping Cart">
+      <div class="info">
+        <h3>Free Delivery</h3>
+        <span>On Virtual Goods</span>
+      </div>
+    </div>
+
+    <div class="icons">
+      <img src="img/icon-2.png" alt="Money Bag">
+      <div class="info">
+        <h3>Massive Profits</h3>
+        <span>Thank You!</span>
+      </div>
+    </div>
+
+    <div class="icons">
+      <img src="img/icon-3.png" alt="Gift Card">
+      <div class="info">
+        <h3>Offers & Gifts</h3>
+        <span>Pens, Badges, Peas</span>
+      </div>
+    </div>
+
+    <div class="icons">
+      <img src="img/icon-4.png" alt="Credit Card">
+      <div class="info">
+        <h3>Secure Payments</h3>
+        <span>Protected By KENcryption™</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- products section -->
+  <section class="products" id="products">
+
+    <h1 class="section-title">Stuff</h1>
+    <div class="box-container">
+
+      <div class="box">
+        <div class="image">
+          <img src="img/paplayers.jpg" alt="Pig Farm Game">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="app/index.html" class="cart-btn">Play Now</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Pig Farm Game</h3>
+          <div class="price">Free to Play</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/Bacon Ships.jpg" alt="Bacon Ships">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Drop Soon..</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Bacon Ships NFT</h3>
+          <div class="price">$5.99 USDC</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/metafluff.jpg" alt="Met Fluff">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Coming!</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Meta Fluff</h3>
+          <div class="price">Free</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/hodlstonks.jpg" alt="Hot Dog">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Drafting..</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Cloned Brownpaper</h3>
+          <div class="price">Free download</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/Sausage Ring.jpeg" alt="Sausage Ring">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Fermenting..</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Meta Sausage NFT</h3>
+          <div class="price">$6.99 USDC</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/Sausage Roll.jpeg" alt="Sausage Roll">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Rolling..</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Sausage Roll NFT</h3>
+          <div class="price">$7.99 USDC</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/Veg Herb.jpg" alt="Vegetable Herb Starter">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Puke</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>Veg Option NFT</h3>
+          <div class="price">$5.49 USDC</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/billposneballgurn.jpg" alt="Bill Posne Ball">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Posne!</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>WTF Game</h3>
+          <div class="price">Gurn to Burn</div>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="img/Moab.jpg" alt="Buffet Table">
+          <div class="icons">
+            <a href="javascript:clickAlert()" class="fas fa-heart"></a>
+            <a href="javascript:clickAlert()" class="cart-btn">Unavailable</a>
+            <a href="javascript:clickAlert()" class="fas fa-share"></a>
+          </div>
+        </div>
+        <div class="content">
+          <h3>HODL Buffet NFT</h3>
+          <div class="price">$59.99 USDC</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- review section -->
+  <section class="review" id="review">
+
+    <h1 class="section-title">People</h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p>I think about GammonVersE all the time. In the car, on the toilet, and in the shower. It has changed my life
+          in ways I could never have imagined.</p>
+        <div class="user">
+          <img src="img/pic-1.jpg" alt="Customer Jimmy">
+          <div class="user-info">
+            <h3>Jimmy Jimlington</h3>
+            <span>Repeat Offender</span>
+          </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+      </div>
+
+      <div class="box">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p>The best sausage roll I've had since 1986.<br>I can't wait for the much hyped Ultimate Kidney Stone NFT range
+          to
+          drop.</p>
+        <div class="user">
+          <img src="img/pic-2.jpg" alt="Customer Catherine">
+          <div class="user-info">
+            <h3>Catherine Peantangs</h3>
+            <span>Ecstatic Customer</span>
+          </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+      </div>
+
+      <div class="box">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+
+        </div>
+        <p>I don't understand any of it. But it is the future and I have no choice.</p>
+        <div class="user">
+          <img src="img/pic-3.jpg" alt="Customer Barry">
+          <div class="user-info">
+            <h3>Barry Gifford</h3>
+            <span>Future Customer</span>
+          </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+      </div>
+
+      <div class="box">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+
+        </div>
+        <p>Our house is so difficult to find that people always arrive late, which means that by the time we go into
+          dinner, I've had so many dry Martinis I'm practically under the piano, and it no longer seems to matter that I
+          haven't put the potatoes on.</p>
+        <div class="user">
+          <img src="img/JC.jpg" alt="Jilly Cooper">
+          <div class="user-info">
+            <h3>Jilly Cooper</h3>
+            <span>Novelist</span>
+          </div>
+        </div>
+        <span class="fas fa-quote-right"></span>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- contact section -->
+  <section class="contact" id="contact">
+
+    <h1 class="section-title"> <span>Meat</span> Us</h1>
+
+    <div class="mapspace">
+      <div id="map" style="height: 320px; width: 100%; "></div>
+
+      <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZ2FyeWdpYmJvbnMiLCJhIjoiY2tvenZ4c2lxMGhwdjJ2bnp4NG5uenp6eiJ9.b2YvwB5kqQscYeVo35pjBA';
+        const map = new mapboxgl.Map({
+          container: 'map',
+          style: 'mapbox://styles/garygibbons/cl7lmos1v000715qwbay7avml', // style URL
+          center: [-43.210, -22.918], // starting position [lng, lat]
+          zoom: 17, // starting zoom
+          pitch: 80,
+          bearing: 90,
+          projection: 'globe' // display the map as a 3D globe
+        });
+      </script>
+
+    </div>
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>Contact Info</h3>
+        <a href="#">+123-456-789</a>
+        <a href="#">example@gmail.com</a>
+        <a href="#">Aberystwyth, Wales - SY23 1AB</a>
+        <img class="debcard" src="img/payment.png" alt="">
+      </div>
+
+      <div class="box">
+        <h3>Locations</h3>
+        <a href="#">Wales</a>
+        <a href="#">USA</a>
+        <a href="#">Japan</a>
+        <a href="#">France</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="team" id="review">
+
+    <div class="box-container">
+
+      <div class="box">
+        <div class="user">
+          <img src="img/Romeo.jpg" alt="Romeo Crokin">
+          <div class="user-info">
+            <h3>Romeo Crokin</h3>
+            <span>CEO</span>
+          </div>
+        </div>
+        <p>Entrepreneur, visionary, passionate lover.
+        <p>DOX my ass. It's clean as a whistle.</p>
+        <p>My favourite food is cabbage soup.</p>
+      </div>
+
+      <div class="box">
+        <div class="user">
+          <img src="img/DoorPhong.jpg" alt="Doreen Phong">
+          <div class="user-info">
+            <h3>Doreen Phong</h3>
+            <span>CMO</span>
+          </div>
+        </div>
+        <p>Masters Degree in PiCoin.
+        <p>When I have to choose between red sauce and brown sauce I usually go for mayo.</p>
+        <p>My favourite drink is mayo.</p>
+      </div>
+
+      <div class="box">
+        <div class="user">
+          <img src="img/wojcol.jpg" alt="Mike Hunt">
+          <div class="user-info">
+            <h3>Mike Hunt</h3>
+            <span>CTO</span>
+          </div>
+        </div>
+        <p>Scrap metal merchant.
+        <p>I'm someone who has a deep emotional attachment to ice cubes.</p>
+        <p>I just like to suck ice cubes.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- footer section-->
+  <section class="footer">
+
+    <div class="credit">Website highly modified from a tutorial by Mr. Web Designer <br><br><br> Privacy & Terms under
+      investigation by SEC, OFCOM, Action Fraud, WWF, WWE, ROSPA.
+    </div>
+
+  </section>
+
+</body>
+
+</html>

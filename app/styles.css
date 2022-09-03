@@ -1,0 +1,216 @@
+:root {
+  --yellow: #ffe206;
+  --green: #6db525;
+  --pink: #ff13b4;
+  --grey: #1f1f23;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(255, 0, 217, 0.5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: .2s linear;
+}
+
+html,
+body {
+  background-color: var(--grey);
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+.backdrop {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+  height: 100vh;
+  background-attachment: fixed;
+  background-image: url("images/PigfarmHeroOpt.jpg");
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+  overflow:scroll;
+  font-weight: bold;
+  color: var(--yellow);
+  text-align: center;
+  padding: 0px calc(28vw - 10rem);
+  min-width: 280px;
+}
+
+.topgap {
+  margin: 0rem;
+  padding: 0rem;
+  height: calc((100vh - 620px) / 2);
+  min-height: 0.6rem;
+}
+
+.containment {
+  backdrop-filter: grayscale(0.3) contrast(0.7) blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  border: 6px solid var(--yellow);
+  padding-bottom: 7px;
+}
+
+.navi {
+  width: 100%;
+  background-color: var(--grey);
+  padding: 5px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
+  border-radius: 16px 16px 0px 0px;
+  border-bottom: 6px solid #ffe206;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.flexmargin {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+form {
+  margin: 0px;
+  padding: 0px;
+}
+
+#navbutton {
+  color: rgb(89, 89, 89);
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  width: 30px;
+  height: 10px;
+  background: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#navbutton:active {
+  transition: 0s linear;
+  color: var(--yellow)
+}
+
+h1 {
+  color: var(--yellow);
+  text-shadow: 0px 0px 8px black;
+  font-size: 46px;
+  background-color: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 span {
+  color: var(--pink)
+}
+
+.digidisp {
+  background-color: var(--grey);
+  padding: 5px 0px;
+  width: 90%;
+  margin: 14px 0px 0px 0px;
+  line-height: 50px;
+  border: 6px solid var(--pink);
+  border-radius: 10px;
+}
+
+p {
+  display: inline;
+  font-size: 30px;
+  margin: 10px;
+  padding: 0px;
+}
+
+#status-el {
+  background-color: var(--grey);
+  padding: 10px 20px;
+  width: calc(90% - 40px);
+  margin: 14px 10px 7px 10px;
+  font-size: 20px;
+  line-height: 30px;
+  height: 60px;
+  border: 6px solid var(--pink);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  color: var(--pink);
+  width: 300px;
+  background: rgb(254, 244, 67);
+  padding: 14px 0px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin: 7px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active:hover {
+  color: rgb(0, 0, 0);
+  background-color: var(--pink);
+}
+
+#win-butt {
+  position: fixed;
+  border: 5px solid var(--pink);
+  font-size: 30px;
+  color: var(--pink);
+  margin-top: 120px;
+  height: 360px;
+  padding-top: 200px;
+  background-image: url("images/pigmid.jpg");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-position-y: 50px;
+}
+
+
+@media (max-width:620px) {
+  .backdrop {
+    padding: 0px 3vw;
+  }
+
+}
+
+@media (max-width:420px) {
+
+  #status-el {
+    padding: 20px 20px;
+  }
+
+  .digidisp p {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+}
+
+@media (max-width:360px) {
+
+  button {
+    width: 240px;
+  }
+}
+
+@media (hover: hover) {
+  button:hover {
+    transform: scale(1.05);
+  }
+
+  #navbutton:hover {
+    transform: scale(1.2);
+    color: var(--yellow)
+  }
+}

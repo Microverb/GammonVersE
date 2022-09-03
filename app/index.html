@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pig Farm App</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- font awesome cdn link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+
+<body>
+
+  <div class="backdrop">
+
+    <div class="topgap"></div>
+
+    <div class="containment" id="misty-el">
+
+      <div class="navi">
+
+        <div class="flexmargin">
+
+          <button title="RESET" class="fa-solid fa-power-off" onclick="reSet()" id="navbutton"></button>
+
+        </div>
+
+        <h1><span>P</span>ig<span> F</span>arm</h1>
+
+        <div class="flexmargin">
+
+          <form>
+            <button title="EXIT" class="fa-solid fa-person-through-window" formaction="../index.html"
+              id="navbutton"></button>
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="digidisp" id="disp-el">
+        <p id="bank-el"></p>
+        <div></div>
+        <p id="pigs-el"></p>
+        <p id="food-el"></p>
+      </div>
+
+      <button id="win-butt" onclick="gooPen()">YOU WON NFT!!<br>CLICK HERE TO CLAIM</button>
+
+      <div id="status-el"></div>
+
+      <button onclick="buyPig()" id="bPig-el">BUY PIG ($50)</button>
+      <button onclick="buyFood()" id="bFood-el">BUY FOOD ($10)</button>
+      <button onclick="feedPig()" id="fPig-el">FEED PIG</button>
+
+      <script src="index.js"></script>
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>
